@@ -1,9 +1,71 @@
+html {
+  height: 100%;
+  padding: 0;
+}
+
 body {
   color: rgb(41, 41, 41);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  min-height: 100%;
 }
 
-.yaml-input-container {
+.container {
+  height: 100%;
+}
+
+.fill-height{
+  height: 100%;
+}
+
+.padded {
+  padding: 20px;
+}
+
+.yaml-input {
   width: 100%;
+  font-size: 0.9em;
+  padding: 12px;
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 3px;
+  height: 100%;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1.1em;
+  border-radius: 3px;
+  border: 1px solid rgb(207, 207, 207);
+}
+
+.button-styled{
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px 20px;
+  font-size: 1.1em;
+}
+
+.button-primary{
+  border-color: rgb(54, 69, 168);
+  color: rgb(54, 69, 168);
+  background-color: transparent;
+}
+
+.button-primary:hover {
+  background-color: rgb(54, 69, 168);
+  color: white;
+  cursor: pointer;
+}
+
+.form-row {
+  margin: 12px 0;
+}
+
+.form-row-title {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }

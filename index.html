@@ -1,4 +1,3 @@
-
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -11,32 +10,42 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <base href="/">
-  <title>WFP Survey Loader</title>
-  <meta name="description" content="WFP Survey Loader">
+  <title>S3 Text File Editor</title>
+  <meta name="description" content="Directly update S3 text files.">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="grid.css">
 </head>
 
 <body>
-  <div class="container">
-    <div class="col-md-6">
-      <textarea rows="50" cols="50" id="yaml-input-main" class="yaml-input"></textarea>
+  <div class="container padded">
+    <div class="fill-height col-md-6">
+      <textarea rows="40" cols="50" id="yaml-input-main" class="yaml-input"></textarea>
     </div>
-    <div class="col-md-6">
-      S3 Key
-      <input id="s3-key-input" value=""></input>
-      <br>
-      S3 Secret
-      <input id="s3-secret-input" type="password"></input>
-      <br>
-      <button class="btn btn-md btn-default" onClick="publish()">Publish</button>
+    <div class="fill-height col-md-6">
+      <h3>S3 Parameters</h3>
+      <div class="form-row">
+        <p class="form-row-title">Bucket Name</p>
+        <input id="s3-bucket-input" class="form-input" value="wfp-bot">
+      </div>
+      <div class="form-row">
+        <p class="form-row-title">Filename</p>
+        <input id="s3-filename-input" class="form-input" value="survey.yml">
+      </div>
+      <div class="form-row">
+        <p class="form-row-title">Key Id</p>
+        <input id="s3-key-input" class="form-input" value="">
+      </div>
+      <div class="form-row">
+        <p class="form-row-title">Secret</p>
+        <input id="s3-secret-input" class="form-input" type="password">
+      </div>
+      <button class="button-styled button-primary" onClick="publish()">Publish</button>
+      <br><br>
+      <div id="error-box" style="color: red"></div>
     </div>
   </div>
-  <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="scripts.js"></script>
 </body>
 

@@ -22,15 +22,23 @@ function publish() {
   var body = {
     yaml: document.getElementById('yaml-input-main').value,
     key: document.getElementById('s3-key-input').value,
-    secret: document.getElementById('s3-secret-input').value
+    secret: document.getElementById('s3-secret-input').value,
+    bucket: document.getElementById('s3-bucket-input').value,
+    filename: document.getElementById('s3-filename-input').value
   }
 
   $.ajax({
     type: "POST",
     url: 'api/publish',
     data: body,
-    success: function(){
-      alert('done')
+    success: function(data){
+      console.log(data)
+      alert('Sucessfully updated!')
+      document.getElementById('error-box').innerHTML = ''
+    },
+    error: function(XMLHttpRequest, textStatus, errorThrown){
+      console.log(errorThrown)
+      document.getElementById('error-box').innerHTML = '' + textStatus + ': ' + errorThrown;
     }
   });
 }
