@@ -1,0 +1,9 @@
+body {
+  color: rgb(41, 41, 41);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.yaml-input-container {
+  width: 100%;
+}

@@ -1,0 +1,43 @@
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <base href="/">
+  <title>WFP Survey Loader</title>
+  <meta name="description" content="WFP Survey Loader">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="grid.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="col-md-6">
+      <textarea rows="50" cols="50" id="yaml-input-main" class="yaml-input"></textarea>
+    </div>
+    <div class="col-md-6">
+      S3 Key
+      <input id="s3-key-input" value=""></input>
+      <br>
+      S3 Secret
+      <input id="s3-secret-input" type="password"></input>
+      <br>
+      <button class="btn btn-md btn-default" onClick="publish()">Publish</button>
+    </div>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="scripts.js"></script>
+</body>
+
+</html>
