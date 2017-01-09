@@ -1,4 +1,4 @@
-# S3 Text Editor
+# S3 Text Uploader
 
 Put textfiles into S3 from a simple browser interface. Useful as a simple editing interface for non-technical users.
 

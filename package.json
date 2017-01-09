@@ -1,5 +1,5 @@
 {
-  "name": "wfpbot",
+  "name": "s3-text-uploader",
   "version": "0.0.1",
   "description": "",
   "main": "server.js",
